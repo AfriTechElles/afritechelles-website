@@ -1,11 +1,5 @@
 import React from 'react';
 
-import unMoisImg from '../assets/un-mois-une-tech.jpg';
-import boursesImg from '../assets/bourses.png';
-import clubTechImg from '../assets/club-tech.png';
-import mentoratImg from '../assets/mentorat.png';
-import formationImg from '../assets/formation.png';
-
 const ProgramsPage: React.FC = () => {
   return (
     <div className="pt-24 pb-12 bg-white dark:bg-brand-black min-h-screen">
@@ -23,7 +17,7 @@ const ProgramsPage: React.FC = () => {
 
             <div className="flex flex-col md:flex-row gap-8 bg-gray-50 dark:bg-neutral-900/50 p-8 rounded-3xl border border-gray-100 dark:border-white/5">
                 <div className="w-full md:w-1/3 h-64 rounded-2xl overflow-hidden">
-                    <img src={unMoisImg} alt="Un Mois Une Tech" className="w-full h-full object-cover" />
+                    <img src="/images/un-mois-une-tech.jpg" alt="Un Mois Une Tech" className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1">
                     <span className="inline-block px-3 py-1 bg-brand-pink/10 text-brand-pink rounded-full text-xs font-bold mb-4">MENSUEL</span>
@@ -39,7 +33,7 @@ const ProgramsPage: React.FC = () => {
 
             <div className="flex flex-col md:flex-row-reverse gap-8 bg-gray-50 dark:bg-neutral-900/50 p-8 rounded-3xl border border-gray-100 dark:border-white/5">
                 <div className="w-full md:w-1/3 h-64 rounded-2xl overflow-hidden">
-                    <img src={boursesImg} alt="Programme de Bourses" className="w-full h-full object-cover" />
+                    <img src="/images/bourses.png" alt="Programme de Bourses" className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1">
                     <span className="inline-block px-3 py-1 bg-brand-purple/10 text-brand-purple rounded-full text-xs font-bold mb-4">BOURSES</span>
@@ -61,7 +55,7 @@ const ProgramsPage: React.FC = () => {
 
             <div className="flex flex-col md:flex-row gap-8 bg-gray-50 dark:bg-neutral-900/50 p-8 rounded-3xl border border-gray-100 dark:border-white/5">
                 <div className="w-full md:w-1/3 h-64 rounded-2xl overflow-hidden">
-                    <img src={clubTechImg} alt="Club Tech dans les Lycées" className="w-full h-full object-cover" />
+                    <img src="/images/club-tech.png" alt="Club Tech" className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1">
                     <span className="inline-block px-3 py-1 bg-emerald-100 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400 rounded-full text-xs font-bold mb-4">ÉDUCATION</span>
@@ -83,7 +77,7 @@ const ProgramsPage: React.FC = () => {
 
             <div className="flex flex-col md:flex-row-reverse gap-8 bg-gray-50 dark:bg-neutral-900/50 p-8 rounded-3xl border border-gray-100 dark:border-white/5">
                 <div className="w-full md:w-1/3 h-64 rounded-2xl overflow-hidden">
-                    <img src={mentoratImg} alt="Mentorat & Accompagnement" className="w-full h-full object-cover" />
+                    <img src="/images/mentorat.png" alt="Mentorat" className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1">
                     <span className="inline-block px-3 py-1 bg-sky-100 text-sky-600 dark:bg-sky-900/30 dark:text-sky-400 rounded-full text-xs font-bold mb-4">MENTORAT</span>
@@ -105,7 +99,7 @@ const ProgramsPage: React.FC = () => {
 
             <div className="flex flex-col md:flex-row gap-8 bg-gray-50 dark:bg-neutral-900/50 p-8 rounded-3xl border border-gray-100 dark:border-white/5">
                 <div className="w-full md:w-1/3 h-64 rounded-2xl overflow-hidden">
-                    <img src={formationImg} alt="Formations & Bootcamps" className="w-full h-full object-cover" />
+                    <img src="/images/formation.png" alt="Formation" className="w-full h-full object-cover" />
                 </div>
                 <div className="flex-1">
                     <span className="inline-block px-3 py-1 bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400 rounded-full text-xs font-bold mb-4">FORMATION</span>

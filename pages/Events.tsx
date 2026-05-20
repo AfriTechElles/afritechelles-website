@@ -2,10 +2,6 @@ import React from 'react';
 import { Calendar, MapPin } from 'lucide-react';
 import { EventItem } from '../types';
 
-import techTalkImg from '../assets/tech-talk.png';
-import workshopImg from '../assets/workshop.png';
-import hackathonImg from '../assets/hackathon.png';
-
 const events: EventItem[] = [
     {
         id: '1',
@@ -14,7 +10,7 @@ const events: EventItem[] = [
         location: 'Google Meet',
         type: 'Online',
         description: 'Une discussion approfondie sur les opportunités de l\'intelligence artificielle pour les startups locales.',
-        imageUrl: techTalkImg
+        imageUrl: '/images/tech-talk.png'
     },
     {
         id: '2',
@@ -23,7 +19,7 @@ const events: EventItem[] = [
         location: 'Google Meet',
         type: 'Online',
         description: 'Maîtrisez les hooks personnalisés et la gestion d\'état complexe avec Redux Toolkit.',
-        imageUrl: workshopImg
+        imageUrl: '/images/workshop.png'
     },
     {
         id: '3',
@@ -32,7 +28,7 @@ const events: EventItem[] = [
         location: 'Google Meet',
         type: 'Online',
         description: '48h pour créer des solutions numériques innovantes répondant aux défis des femmes.',
-        imageUrl: hackathonImg
+        imageUrl: '/images/hackathon.png'
     }
 ];
 
