@@ -2,6 +2,10 @@ import React from 'react';
 import { Calendar, MapPin } from 'lucide-react';
 import { EventItem } from '../types';
 
+import techTalkImg from '../assets/tech-talk.png';
+import workshopImg from '../assets/workshop.png';
+import hackathonImg from '../assets/hackathon.png';
+
 const events: EventItem[] = [
     {
         id: '1',
@@ -10,7 +14,7 @@ const events: EventItem[] = [
         location: 'Google Meet',
         type: 'Online',
         description: 'Une discussion approfondie sur les opportunités de l\'intelligence artificielle pour les startups locales.',
-        imageUrl: './assets/tech-talk.png'
+        imageUrl: techTalkImg
     },
     {
         id: '2',
@@ -19,7 +23,7 @@ const events: EventItem[] = [
         location: 'Google Meet',
         type: 'Online',
         description: 'Maîtrisez les hooks personnalisés et la gestion d\'état complexe avec Redux Toolkit.',
-        imageUrl: './assets/workshop.png'
+        imageUrl: workshopImg
     },
     {
         id: '3',
@@ -28,7 +32,7 @@ const events: EventItem[] = [
         location: 'Google Meet',
         type: 'Online',
         description: '48h pour créer des solutions numériques innovantes répondant aux défis des femmes.',
-        imageUrl: './assets/hackathon.png'
+        imageUrl: hackathonImg
     }
 ];
 
@@ -37,16 +41,11 @@ const Events: React.FC = () => {
     <div className="pt-24 pb-12 bg-white dark:bg-brand-black min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">Événements à venir</h1>
-
         <div className="grid lg:grid-cols-2 gap-8">
             {events.map(event => (
                 <div key={event.id} className="flex flex-col md:flex-row bg-gray-50 dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm border border-gray-100 dark:border-white/5 hover:border-brand-pink/30 transition-all">
                     <div className="w-full md:w-48 h-48 md:h-auto relative">
-                        <img
-                            src={event.imageUrl}
-                            alt={event.title}
-                            className="w-full h-full object-cover"
-                        />
+                        <img src={event.imageUrl} alt={event.title} className="w-full h-full object-cover" />
                         <div className="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-black px-3 py-1 rounded-lg text-xs font-bold uppercase">
                             {event.type}
                         </div>

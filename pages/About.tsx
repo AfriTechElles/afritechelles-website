@@ -1,5 +1,11 @@
 import React from 'react';
-import { Target, Users, Eye, Heart, Zap, Shield, Star, Lightbulb, HandHeart } from 'lucide-react';
+import { Target, Eye, Heart, Zap, Star, Lightbulb, HandHeart } from 'lucide-react';
+
+import miImg from '../assets/mi.jpg';
+import abiImg from '../assets/abi.JPG';
+import sandrineImg from '../assets/Sandrine.jpeg';
+import mariaImg from '../assets/maria.jpeg';
+import fadiImg from '../assets/fadi.jpeg';
 
 const values = [
   { icon: Heart, label: 'Inclusion', description: 'Garantir un accès équitable à toutes, sans exception.' },
@@ -10,26 +16,10 @@ const values = [
 ];
 
 const teamMembers = [
-  {
-    name: "Abigail Sylvie",
-    role: "Fondatrice / CEO",
-    image: "./assets/abi.JPG"
-  },
-  {
-    name: "Ella Sandrine De Charité",
-    role: "Directrice des Programmes & de l’Innovation",
-    image: "./assets/Sandrine.jpeg"
-  },
-  {
-    name: "Kanga Maria Loicia ",
-    role: "Directrice de la Communication & du Branding",
-    image: "./assets/maria.jpeg"
-  },
-  {
-    name: "Kingui Fadimatou Ousseini",
-    role: "Directrice des Partenariats & des Relations Extérieures",
-    image: "./assets/fadi.jpeg"
-  },
+  { name: "Abigail Sylvie", role: "Fondatrice / CEO", image: abiImg },
+  { name: "Ella Sandrine De Charité", role: "Directrice des Programmes & de l'Innovation", image: sandrineImg },
+  { name: "Kanga Maria Loicia", role: "Directrice de la Communication & du Branding", image: mariaImg },
+  { name: "Kingui Fadimatou Ousseini", role: "Directrice des Partenariats & des Relations Extérieures", image: fadiImg },
 ];
 
 const About: React.FC = () => {
@@ -37,7 +27,6 @@ const About: React.FC = () => {
     <div className="pt-24 pb-16 bg-white dark:bg-brand-black min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Hero Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
            Qui <span className="gradient-text">sommes-nous</span>
@@ -47,10 +36,9 @@ const About: React.FC = () => {
           </p>
         </div>
 
-        {/* À propos + image */}
         <div className="grid md:grid-cols-2 gap-12 mb-24 items-center">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl h-96">
-            <img src="./assets/mi.jpg" alt="About us" className="w-full h-full object-cover" />
+            <img src={miImg} alt="About us" className="w-full h-full object-cover" />
           </div>
 
           <div className="space-y-8">
@@ -94,13 +82,11 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        {/* Valeurs */}
         <div className="mb-24">
           <div className="text-center mb-12">
             <span className="text-xs font-bold tracking-widest uppercase text-brand-pink">Ce qui nous guide</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-2">Nos Valeurs</h2>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {values.map((val) => {
               const Icon = val.icon;
@@ -117,13 +103,11 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        {/* Équipe */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <span className="text-xs font-bold tracking-widest uppercase text-brand-pink">  Unies pour faire la différence</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-2"> Notre Équipe</h2>
+            <span className="text-xs font-bold tracking-widest uppercase text-brand-pink">Unies pour faire la différence</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-2">Notre Équipe</h2>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {teamMembers.map((member) => (
               <div key={member.name} className="text-center group">
