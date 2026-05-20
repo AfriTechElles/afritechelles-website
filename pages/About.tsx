@@ -2,8 +2,8 @@ import React from 'react';
 import { Target, Eye, Heart, Zap, Star, Lightbulb, HandHeart } from 'lucide-react';
 
 import miImg from '../assets/mi.jpg';
-import abiImg from '../assets/abi.JPG';
-import sandrineImg from '../assets/Sandrine.jpeg';
+import abiImg from '../assets/abi.jpg';
+import sandrineImg from '../assets/sandrine.jpeg';
 import mariaImg from '../assets/maria.jpeg';
 import fadiImg from '../assets/fadi.jpeg';
 
