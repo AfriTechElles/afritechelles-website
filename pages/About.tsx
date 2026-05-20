@@ -9,13 +9,35 @@ const values = [
   { icon: Zap, label: 'Engagement', description: 'Agir concrètement pour le changement.' },
 ];
 
+const teamMembers = [
+  {
+    name: "Abigail Sylvie",
+    role: "Fondatrice / CEO",
+    image: "./assets/abi.JPG"
+  },
+  {
+    name: "Ella Sandrine De Charité",
+    role: "Directrice des Programmes & de l’Innovation",
+    image: "./assets/Sandrine.jpeg"
+  },
+  {
+    name: "Kanga Maria Loicia ",
+    role: "Directrice de la Communication & du Branding",
+    image: "./assets/maria.jpeg"
+  },
+  {
+    name: "Kingui Fadimatou Ousseini",
+    role: "Directrice des Partenariats & des Relations Extérieures",
+    image: "./assets/fadi.jpeg"
+  },
+];
 
 const About: React.FC = () => {
   return (
     <div className="pt-24 pb-16 bg-white dark:bg-brand-black min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* ── Hero Header ── */}
+        {/* Hero Header */}
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
            Qui <span className="gradient-text">sommes-nous</span>
@@ -25,20 +47,13 @@ const About: React.FC = () => {
           </p>
         </div>
 
-        {/* ── À propos + image ── */}
+        {/* À propos + image */}
         <div className="grid md:grid-cols-2 gap-12 mb-24 items-center">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl h-96">
-            <img src="https://picsum.photos/800/800?random=101" alt="About us" className="w-full h-full object-cover" />
-            {/* Slogan overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-              <p className="text-white font-bold italic text-lg leading-snug">
-                "L'espace où tes idées sont entendues, valorisées et soutenues."
-              </p>
-            </div>
+            <img src="./assets/mi.jpg" alt="About us" className="w-full h-full object-cover" />
           </div>
 
           <div className="space-y-8">
-            {/* Vision */}
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <div className="p-2.5 bg-brand-purple/10 rounded-xl text-brand-purple">
@@ -51,7 +66,6 @@ const About: React.FC = () => {
               </p>
             </div>
 
-            {/* Mission */}
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <div className="p-2.5 bg-brand-pink/10 rounded-xl text-brand-pink">
@@ -80,7 +94,7 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        {/* ── Valeurs ── */}
+        {/* Valeurs */}
         <div className="mb-24">
           <div className="text-center mb-12">
             <span className="text-xs font-bold tracking-widest uppercase text-brand-pink">Ce qui nous guide</span>
@@ -103,26 +117,25 @@ const About: React.FC = () => {
           </div>
         </div>
 
-
-        {/* ── Équipe ── */}
-        <div>
+        {/* Équipe */}
+        <div className="mb-20">
           <div className="text-center mb-12">
-            <span className="text-xs font-bold tracking-widest uppercase text-brand-pink">Les visages derrière le projet</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-2">L'Équipe Dirigeante</h2>
+            <span className="text-xs font-bold tracking-widest uppercase text-brand-pink">  Unies pour faire la différence</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-2"> Notre Équipe</h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="text-center group">
+            {teamMembers.map((member) => (
+              <div key={member.name} className="text-center group">
                 <div className="w-28 h-28 mx-auto rounded-full overflow-hidden border-4 border-white dark:border-neutral-800 shadow-lg mb-4">
                   <img
-                    src={`https://picsum.photos/200/200?random=${100 + i}`}
-                    alt="Team Member"
+                    src={member.image}
+                    alt={member.name}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <h4 className="text-base font-bold text-gray-900 dark:text-white">Sarah Doe</h4>
-                <p className="text-brand-pink text-sm font-medium">Co-Fondatrice</p>
+                <h4 className="text-base font-bold text-gray-900 dark:text-white">{member.name}</h4>
+                <p className="text-brand-pink text-sm font-medium">{member.role}</p>
               </div>
             ))}
           </div>

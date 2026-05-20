@@ -1,6 +1,6 @@
 import { LucideIcon } from 'lucide-react';
 
-export type PageName = 'home' | 'about' | 'programs' | 'mentorship' | 'events' | 'contact';
+export type PageName = 'home' | 'about' | 'programs'  | 'events' | 'contact';
 
 export interface Program {
   id: string;

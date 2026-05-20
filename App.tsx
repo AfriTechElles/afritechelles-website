@@ -8,7 +8,6 @@ import { PageName } from "./types";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ProgramsPage from "./pages/ProgramsPage";
-import Mentorship from "./pages/Mentorship";
 import Events from "./pages/Events";
 import Contact from "./pages/Contact";
 
@@ -51,8 +50,7 @@ const App: React.FC = () => {
                 return <About />;
             case "programs":
                 return <ProgramsPage />;
-            case "mentorship":
-                return <Mentorship />;
+    
             case "events":
                 return <Events />;
             case "contact":

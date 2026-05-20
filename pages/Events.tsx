@@ -5,54 +5,48 @@ import { EventItem } from '../types';
 const events: EventItem[] = [
     {
         id: '1',
-        title: 'Journée "Découverte des métiers du numérique"',
-        date: 'À venir',
-        location: 'Cameroun',
-        type: 'In-Person',
-        description: 'Une journée d\'orientation avec des intervenants cyber, dev, data et cloud pour aider les filles à trouver leur voie dans la tech. Témoignages, Q&A et mini atelier pratique.',
-        imageUrl: 'https://picsum.photos/600/300?random=20'
+        title: 'Tech Talk: L\'IA en Afrique',
+        date: '15 Oct 2024',
+        location: 'Google Meet',
+        type: 'Online',
+        description: 'Une discussion approfondie sur les opportunités de l\'intelligence artificielle pour les startups locales.',
+        imageUrl: './assets/tech-talk.png'
     },
     {
         id: '2',
-        title: 'Networking & Career Day',
-        date: 'À venir',
-        location: ' Cameroun',
-        type: 'In-Person',
-        description: 'Atelier CV, simulations d\'entretien, sessions de networking et relecture personnalisée des CV pour préparer les filles au monde professionnel.',
-        imageUrl: 'https://picsum.photos/600/300?random=21'
-    },
-    {
-        id: '4',
-        title: 'Action Sociale – Santé Mentale & Orphelinat',
-        date: 'À venir',
-        location: 'Cameroun',
-        type: 'In-Person',
-        description: 'Visite d\'un orphelinat local combinée à une sensibilisation sur la santé mentale : discussions ouvertes et activités éducatives adaptées aux enfants.',
-        imageUrl: 'https://picsum.photos/600/300?random=23'
-    },
-    {
-        id: '5',
-        title: 'Campagne Fundraising, Fournitures Scolaires',
-        date: 'Avant septembre 2025',
-        location: 'En ligne + terrain',
+        title: 'Workshop React Avancé',
+        date: '22 Oct 2024',
+        location: 'Google Meet',
         type: 'Online',
-        description: 'Campagne de collecte de fonds pour offrir des fournitures scolaires à des filles dans le besoin avant la rentrée. Dons, partenariats et campagnes en ligne.',
-        imageUrl: 'https://picsum.photos/600/300?random=24'
+        description: 'Maîtrisez les hooks personnalisés et la gestion d\'état complexe avec Redux Toolkit.',
+        imageUrl: './assets/workshop.png'
     },
+    {
+        id: '3',
+        title: 'Hackathon: Code for Her',
+        date: '05 Nov 2024',
+        location: 'Google Meet',
+        type: 'Online',
+        description: '48h pour créer des solutions numériques innovantes répondant aux défis des femmes.',
+        imageUrl: './assets/hackathon.png'
+    }
 ];
 
 const Events: React.FC = () => {
   return (
     <div className="pt-24 pb-12 bg-white dark:bg-brand-black min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Événements à venir</h1>
-        <p className="text-gray-500 dark:text-neutral-500 mb-12">Des moments ponctuels pour se retrouver, agir et avancer ensemble.</p>
+        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">Événements à venir</h1>
 
         <div className="grid lg:grid-cols-2 gap-8">
             {events.map(event => (
                 <div key={event.id} className="flex flex-col md:flex-row bg-gray-50 dark:bg-neutral-900 rounded-3xl overflow-hidden shadow-sm border border-gray-100 dark:border-white/5 hover:border-brand-pink/30 transition-all">
                     <div className="w-full md:w-48 h-48 md:h-auto relative">
-                        <img src={event.imageUrl} alt={event.title} className="w-full h-full object-cover" />
+                        <img
+                            src={event.imageUrl}
+                            alt={event.title}
+                            className="w-full h-full object-cover"
+                        />
                         <div className="absolute top-4 left-4 bg-white/90 backdrop-blur text-brand-black px-3 py-1 rounded-lg text-xs font-bold uppercase">
                             {event.type}
                         </div>
